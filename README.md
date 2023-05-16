@@ -27,4 +27,5 @@ npm i && npm run start
 ```
 
 > 後端成功啟用會顯示 Server listening on 4000
-> 前端成功啟用則開啟 http://localhost:3000
+
+> 前端成功啟用則可開啟 http://localhost:3000
