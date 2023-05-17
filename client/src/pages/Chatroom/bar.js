@@ -1,10 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ChatBar = ({ socket }) => {
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    socket.on("newUserResponse", (data) => setUsers(data));
+    socket.on("newUserResponse", (data) => {
+      if (
+        data?.length === 0 ||
+        (data?.length > 0 &&
+          !data?.find(
+            (user) => user?.userName === localStorage.getItem("userName")
+          ))
+      ) {
+        localStorage.removeItem("userName");
+        navigate("/");
+
+        window.location.reload();
+      }
+      setUsers(data);
+    });
   }, [socket, users]);
 
   return (
