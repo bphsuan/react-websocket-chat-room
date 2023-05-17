@@ -4,9 +4,7 @@
 
 ## Demo
 
-![enter-room](./docs/assets/enter-room.png)
-
-![chat-room](./docs/assets/chat-room.png)
+![demo](./docs/assets/demo.gif)
 
 ## 使用技術
 
