@@ -6,7 +6,7 @@
 
 ![demo](./docs/assets/demo.gif)
 
-## 使用技術
+## 技術與工具
 
 - server
   - node.js
